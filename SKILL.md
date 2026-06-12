@@ -1,9 +1,9 @@
 ---
-name: modular-maintainable-development
+name: secure-modular-release-engineering
 description: Use when implementing features, fixing bugs, refactoring, or reviewing architecture where files may approach 800 lines, responsibilities may mix, business boundaries may blur, relevant skills must guide implementation, or assumptions need repository evidence.
 ---
 
-# Modular Maintainable Development
+# Secure Modular Release Engineering
 
 ## Core Principle
 

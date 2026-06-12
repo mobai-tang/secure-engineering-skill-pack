@@ -1,4 +1,4 @@
 interface:
-  display_name: "Modular Maintainable Development"
-  short_description: "Enforce evidence-first modular code under 800 lines"
-  default_prompt: "Use $modular-maintainable-development to implement this change with clear module boundaries and single-responsibility files."
+  display_name: "Secure Modular Release Engineering"
+  short_description: "Build modular software with evidence-based release security"
+  default_prompt: "Use $secure-modular-release-engineering to implement and validate this change with clear module boundaries, release acceptance evidence, and defensive security controls."
