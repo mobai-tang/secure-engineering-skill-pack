@@ -1,0 +1,4 @@
+interface:
+  display_name: "Modular Maintainable Development"
+  short_description: "Enforce evidence-first modular code under 800 lines"
+  default_prompt: "Use $modular-maintainable-development to implement this change with clear module boundaries and single-responsibility files."
