@@ -1,5 +1,7 @@
 # Secure Modular Release Engineering
 
+[简体中文](README.zh-CN.md)
+
 An evidence-driven instruction set for AI coding agents that combines maintainable software architecture, disciplined implementation, production release acceptance, and defensive security review.
 
 The skill helps AI agents build software that is modular, testable, reviewable, operationally ready, and safer to release. It supports Codex, Claude Code, Cursor, Trae, Windsurf, GitHub Copilot, and other tools that accept reusable skills, project rules, or custom instructions.
