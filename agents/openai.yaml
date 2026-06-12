@@ -1,4 +1,0 @@
-interface:
-  display_name: "Secure Modular Release Engineering"
-  short_description: "Build modular software with evidence-based release security"
-  default_prompt: "Use $secure-modular-release-engineering to implement and validate this change with clear module boundaries, release acceptance evidence, and defensive security controls."

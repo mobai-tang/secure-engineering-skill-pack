@@ -1,0 +1,4 @@
+interface:
+  display_name: "Modular Evidence Implementation"
+  short_description: "Implement modular changes using verified repository evidence"
+  default_prompt: "Use $modular-evidence-implementation to implement this change with verified repository evidence, clear ownership boundaries, and focused validation."

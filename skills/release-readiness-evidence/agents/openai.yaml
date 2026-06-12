@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Readiness Evidence"
+  short_description: "Make evidence-based release and Go or No-Go decisions"
+  default_prompt: "Use $release-readiness-evidence to assess this release, record explicit evidence, and return a supported Go, Conditional Go, or No-Go decision."

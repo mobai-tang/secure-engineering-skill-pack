@@ -1,0 +1,4 @@
+interface:
+  display_name: "Authorized Security Review"
+  short_description: "Perform scoped defensive security review with evidence"
+  default_prompt: "Use $authorized-security-review to perform a defensive, explicitly authorized security review within the approved scope and report evidence-based findings."
