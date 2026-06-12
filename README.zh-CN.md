@@ -92,6 +92,18 @@ $HOME/.agents/skills/
 
 将相关 `SKILL.md` 添加为项目规则、工作区指令、代理规则或自定义指令。工具支持引用文件时，同时保留对应的 `references/` 目录。
 
+## 验证安装
+
+运行仓库校验器：
+
+```bash
+python scripts/validate_pack.py
+```
+
+然后尝试 [`examples/quickstart.md`](examples/quickstart.md) 中的任务，确认代理会选择相关专注型 Skill、区分证据与假设、报告实际执行的验证，并且不会在没有证据时声称可以上线。
+
+GitHub Actions 会在 Push 和 Pull Request 时运行相同校验器。
+
 ## 仓库结构
 
 ```text
@@ -107,6 +119,8 @@ secure-engineering-skill-pack/
 │   └── migration-and-rollback-review/
 ├── shared/
 ├── examples/
+├── scripts/validate_pack.py
+├── .github/workflows/validate.yml
 ├── CHANGELOG.md
 ├── LICENSE
 └── README.md
@@ -132,6 +146,8 @@ secure-engineering-skill-pack/
 - 将数据最小化、依赖来源、可观测性和迁移恢复视为工程要求。
 - 没有证据时，绝不能声称代码已修复、安全、测试完成或可以上线。
 
+800 行限制是一个刻意宽松的审查触发线，并不表示所有超过 800 行的文件都必然错误。详细依据、例外情况和团队自定义方式位于模块化实现参考资料中。
+
 ## 使用示例
 
 - “实现这个功能，并保持清晰模块归属和聚焦测试。”使用 `modular-evidence-implementation`。
@@ -142,6 +158,8 @@ secure-engineering-skill-pack/
 - “审查 AI 功能如何处理用户数据。”使用 `data-privacy-review`。
 - “验证服务发生事故时能否检测与恢复。”使用 `observability-and-incident-readiness`。
 - “审查数据库迁移和回滚方案。”使用 `migration-and-rollback-review`。
+
+完整的使用前后对比示例请参阅 [`examples/quickstart.md`](examples/quickstart.md)。
 
 ## 许可证
 

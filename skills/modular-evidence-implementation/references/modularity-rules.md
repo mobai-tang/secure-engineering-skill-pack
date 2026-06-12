@@ -111,11 +111,15 @@ Use independently understandable features and responsibilities as the primary sp
 
 **Hard limit: every handwritten source file must stay at or below 800 physical lines.**
 
+The 800-line threshold is a deliberately generous guardrail, not a universal scientific boundary. It exists to force an ownership and responsibility review before a handwritten file becomes unusually difficult to navigate, test, review, and change safely. Teams may adopt a stricter documented threshold. Raising it requires repository-specific evidence and an explicit policy decision; do not bypass it ad hoc for one change.
+
 Before editing, measure touched files. Estimate whether the change will approach the limit. At 600 lines, proactively review and plan a split; never wait until line 800 to think about structure. If an existing handwritten file exceeds 800 lines and must be changed, split it as part of the change before adding functionality.
 
 Allowed exceptions are limited to generated code, lockfiles, machine-produced schemas, vendored code, and cohesive declarative data that cannot be safely split. Do not hand-edit generated or vendored exceptions. Document any declarative-data exception in the completion report.
 
 The 800-line limit does not justify meaningless fragmentation. Extract cohesive concepts with precise names and explicit contracts.
+
+When a team adopts a different threshold, document the value, rationale, exceptions, and enforcement location in repository policy. Preserve the underlying goal: prevent unclear ownership, mixed responsibilities, and changes that are difficult to review or validate.
 
 ## Active Split Criteria
 

@@ -92,6 +92,18 @@ Project:
 
 Add the relevant `SKILL.md` as a project rule, workspace instruction, agent rule, or custom instruction. Keep its `references/` directory available when the tool supports referenced files.
 
+## Verify Installation
+
+Run the repository validator:
+
+```bash
+python scripts/validate_pack.py
+```
+
+Then try the task in [`examples/quickstart.md`](examples/quickstart.md). Confirm the agent selects the relevant focused skills, distinguishes evidence from assumptions, reports validation actually run, and does not claim unsupported release readiness.
+
+GitHub Actions runs the same validator for pushes and pull requests.
+
 ## Repository Structure
 
 ```text
@@ -109,6 +121,8 @@ secure-engineering-skill-pack/
 │   ├── review-mode.md
 │   └── output-contract.md
 ├── examples/
+├── scripts/validate_pack.py
+├── .github/workflows/validate.yml
 ├── CHANGELOG.md
 ├── LICENSE
 └── README.md
@@ -134,6 +148,8 @@ Every skill directory contains a short `SKILL.md`, optional `agents/openai.yaml`
 - Treat data minimization, dependency provenance, observability, and migration recovery as engineering requirements.
 - Never claim code is fixed, secure, tested, or ready without evidence.
 
+The 800-line limit is a deliberately generous review trigger, not a claim that every file over 800 lines is inherently wrong. Detailed rationale, exceptions, and team-level customization guidance live in the modular implementation reference.
+
 ## Examples
 
 - “Implement this feature with clear module ownership and focused tests.” Use `modular-evidence-implementation`.
@@ -144,6 +160,8 @@ Every skill directory contains a short `SKILL.md`, optional `agents/openai.yaml`
 - “Review how this AI feature handles user data.” Use `data-privacy-review`.
 - “Verify this service can be detected and recovered during an incident.” Use `observability-and-incident-readiness`.
 - “Review this database migration and rollback plan.” Use `migration-and-rollback-review`.
+
+Start with [`examples/quickstart.md`](examples/quickstart.md) for a complete before-and-after example.
 
 ## License
 
