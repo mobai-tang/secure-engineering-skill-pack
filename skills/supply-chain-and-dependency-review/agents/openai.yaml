@@ -1,0 +1,4 @@
+interface:
+  display_name: "Supply Chain and Dependency Review"
+  short_description: "Review dependencies, builds, CI, images, and release-chain risk"
+  default_prompt: "Use $supply-chain-and-dependency-review to review this dependency or build-chain change for necessity, provenance, permissions, vulnerabilities, licensing, artifacts, and rollback risk."

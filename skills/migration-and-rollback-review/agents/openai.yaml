@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migration and Rollback Review"
+  short_description: "Review compatibility, rollout safety, repair, and recovery"
+  default_prompt: "Use $migration-and-rollback-review to assess compatibility, migration execution, observability, repair, rollback, and roll-forward safety."

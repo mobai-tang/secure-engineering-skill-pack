@@ -12,4 +12,11 @@
 - `modular-evidence-implementation`
 - `release-readiness-evidence`
 - `authorized-security-review`
+- `threat-modeling-lite`
+- `supply-chain-and-dependency-review`
+- `data-privacy-review`
+- `observability-and-incident-readiness`
+- `migration-and-rollback-review`
+- Shared PR review mode and evidence-based output contract
+- Good and bad behavior examples
 - MIT license

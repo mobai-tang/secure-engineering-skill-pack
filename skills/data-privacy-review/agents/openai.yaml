@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Privacy Review"
+  short_description: "Review data collection, sharing, retention, and deletion"
+  default_prompt: "Use $data-privacy-review to inventory data, map its lifecycle and third-party flows, verify minimization and user controls, and report privacy risks."

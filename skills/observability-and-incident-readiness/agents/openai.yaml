@@ -1,0 +1,4 @@
+interface:
+  display_name: "Observability and Incident Readiness"
+  short_description: "Prepare detection, diagnosis, containment, and recovery"
+  default_prompt: "Use $observability-and-incident-readiness to verify critical signals, alerts, dashboards, runbooks, containment, rollback, recovery, and data repair."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Threat Modeling Lite"
+  short_description: "Identify abuse paths and controls before implementation"
+  default_prompt: "Use $threat-modeling-lite to identify assets, entry points, trust boundaries, abuse cases, controls, required tests, and residual risk before implementation."
