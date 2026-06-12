@@ -13,6 +13,8 @@ Implement the requested behavior through clear business boundaries and single-re
 
 Read [references/modularity-rules.md](references/modularity-rules.md) before changing project structure or implementing a non-trivial feature.
 
+Read [references/release-acceptance-and-authorized-security-testing.md](references/release-acceptance-and-authorized-security-testing.md) before a production release, release-readiness review, security test, penetration test, or attack simulation.
+
 ## Before Any Code
 
 Do not write or edit production code until all gates pass:
@@ -34,6 +36,10 @@ Do not write or edit production code until all gates pass:
 6. Review the final diff for boundary leaks, catch-all files, oversized files, unsupported assumptions, and unrelated coupling.
 7. Run focused tests plus the repository's relevant validation commands.
 8. When a bug remains unresolved after local diagnosis, search the exact error, relevant official documentation, upstream issues, and other authoritative sources before concluding that progress is blocked.
+9. Before release, complete the applicable release acceptance and authorized security testing gates. Never perform active security testing without explicit authorization and scope.
+10. For security-sensitive work and release reviews, use the defensive attacker mindset to identify valuable assets, reachable entry points, failed assumptions, trust-boundary crossings, chained weaknesses, and missing prevention, detection, or recovery controls.
+11. Record each applicable release and security check as pass, fail, blocked, or not applicable with evidence. Never treat skipped, unknown, or untested checks as passing.
+12. Before release, inventory user-callable, user-prohibited, and administrator-only capabilities; verify server-side authorization, credential protection, and layered registration-abuse defenses.
 
 ## Non-Negotiable Rules
 
@@ -50,6 +56,8 @@ Do not write or edit production code until all gates pass:
 - Never invent files, APIs, fields, dependencies, commands, behavior, requirements, or test results. Verify them from repository evidence or label unresolved assumptions explicitly.
 - Invoke and follow relevant skills before writing code. Re-check skills when the task changes materially.
 - Preserve user changes and avoid unrelated restructuring.
+- Never rely on client-side visibility, hidden routes, disabled controls, or UI role checks as authorization.
+- Never release authentication, recovery, registration, or administrative workflows without negative-path and abuse-case evidence.
 - Never silently abandon an unresolved bug or claim it is fixed without evidence.
 - Do not grind indefinitely on a bug. After a small number of evidence-driven local attempts stop repeating experiments, research authoritative sources, and then tell the user if the bug remains unresolved.
 
@@ -91,4 +99,5 @@ Report:
 - line counts for files near the 800-line limit;
 - public contracts and dependency direction;
 - tests and validation actually run;
+- release acceptance matrix, capability-boundary evidence, credential and registration-abuse results, authorized security testing scope, findings, retest results, exceptions, and final Go, Conditional Go, or No-Go recommendation when applicable;
 - any remaining structural debt.

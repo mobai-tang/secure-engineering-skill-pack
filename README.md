@@ -23,6 +23,9 @@ Use this skill when:
 - Verify assumptions using repository evidence before implementation.
 - Preserve existing user changes and avoid unrelated restructuring.
 - Run focused tests and relevant validation commands.
+- Complete release acceptance and authorized security testing before production release.
+- Review the system from a defensive attacker perspective to identify attack paths and missing controls.
+- Verify user and administrator capability boundaries, password and credential protection, and layered defenses against automated registration abuse.
 
 ## Unresolved Bugs
 
@@ -89,3 +92,5 @@ Native skill discovery and exact rule-file locations vary by tool and version. W
 ## Main Skill File
 
 See [`SKILL.md`](SKILL.md) for the complete workflow and rules.
+
+See [`references/release-acceptance-and-authorized-security-testing.md`](references/release-acceptance-and-authorized-security-testing.md) for release gates and authorized attack-simulation rules.
